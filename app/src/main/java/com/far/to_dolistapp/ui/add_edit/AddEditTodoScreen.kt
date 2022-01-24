@@ -9,6 +9,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.far.to_dolistapp.ui.theme.DarkGray900
 import com.far.to_dolistapp.util.UiEvent
 import kotlinx.coroutines.flow.collect
 
@@ -44,33 +45,44 @@ fun AddEditTodoScreen(
         }
     ) {
         Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(16.dp)
+            modifier = Modifier.fillMaxSize()
         ) {
-            TextField(
-                value = viewModel.title,
-                onValueChange = {
-                    viewModel.onEvent(AddEditTodoEvent.OnTitleChange(it))
-                },
-                placeholder = {
-                    Text(text = "Title")
-                },
-                modifier = Modifier.fillMaxWidth()
+            TopAppBar(
+                backgroundColor = DarkGray900,
+                title = {
+                    Text(text = viewModel.toolbarTitle)
+                }
             )
-            Spacer(modifier = Modifier.height(8.dp))
-            TextField(
-                value = viewModel.description,
-                onValueChange = {
-                    viewModel.onEvent(AddEditTodoEvent.OnDescriptionChange(it))
-                },
-                placeholder = {
-                    Text(text = "Description")
-                },
-                modifier = Modifier.fillMaxWidth(),
-                singleLine = false,
-                maxLines = 5
-            )
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(16.dp)
+            ) {
+                TextField(
+                    value = viewModel.title,
+                    onValueChange = {
+                        viewModel.onEvent(AddEditTodoEvent.OnTitleChange(it))
+                    },
+                    placeholder = {
+                        Text(text = "Title")
+                    },
+                    modifier = Modifier.fillMaxWidth()
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+                TextField(
+                    value = viewModel.description,
+                    onValueChange = {
+                        viewModel.onEvent(AddEditTodoEvent.OnDescriptionChange(it))
+                    },
+                    placeholder = {
+                        Text(text = "Description")
+                    },
+                    modifier = Modifier.fillMaxWidth(),
+                    singleLine = false,
+                    maxLines = 5
+                )
+            }
         }
+
     }
 }

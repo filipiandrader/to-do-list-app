@@ -1,10 +1,7 @@
 package com.far.to_dolistapp.ui.list
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.Checkbox
-import androidx.compose.material.Icon
-import androidx.compose.material.IconButton
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.runtime.Composable
@@ -21,39 +18,51 @@ fun TodoItem(
     onEvent: (TodoListEvent) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    Row(
-        modifier = modifier,
-        verticalAlignment = Alignment.CenterVertically
+    Card(
+        elevation = 4.dp,
+        modifier = Modifier
+            .padding(12.dp)
+            .fillMaxWidth()
+            .wrapContentHeight()
     ) {
-        Column(
-            modifier = Modifier.weight(1f),
-            verticalArrangement = Arrangement.Center
+        Row(
+            modifier = modifier,
+            verticalAlignment = Alignment.CenterVertically
         ) {
-            Row(
-                verticalAlignment = Alignment.CenterVertically
+            Column(
+                modifier = Modifier.weight(1f),
+                verticalArrangement = Arrangement.Center
             ) {
-                Text(
-                    text = todo.title,
-                    fontSize = 20.sp,
-                    fontWeight = FontWeight.Black
-                )
-                Spacer(modifier = Modifier.width(8.dp))
-                IconButton(onClick = {
-                    onEvent(TodoListEvent.OnDeleteTodoClick(todo))
-                }) {
-                    Icon(
-                        imageVector = Icons.Default.Delete,
-                        contentDescription = "Delete"
+                Row(
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = todo.title,
+                        fontSize = 20.sp,
+                        fontWeight = FontWeight.Black
                     )
                 }
+                todo.description?.let {
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(text = it)
+                }
             }
-            todo.description?.let {
-                Spacer(modifier = Modifier.height(8.dp))
-                Text(text = it)
+            Checkbox(
+                checked = todo.isDone,
+                onCheckedChange = { isChecked ->
+                    onEvent(TodoListEvent.OnDoneChangeClick(todo, isChecked))
+                }
+            )
+            IconButton(
+                onClick = {
+                    onEvent(TodoListEvent.OnDeleteTodoClick(todo))
+                }
+            ) {
+                Icon(
+                    imageVector = Icons.Default.Delete,
+                    contentDescription = "Delete"
+                )
             }
         }
-        Checkbox(checked = todo.isDone, onCheckedChange = { isChecked ->
-            onEvent(TodoListEvent.OnDoneChangeClick(todo, isChecked))
-        })
     }
 }

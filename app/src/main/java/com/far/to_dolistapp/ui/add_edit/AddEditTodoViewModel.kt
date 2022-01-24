@@ -33,10 +33,13 @@ class AddEditTodoViewModel @Inject constructor(
     private val _uiEventChannel = Channel<UiEvent>()
     val uiEventChannel = _uiEventChannel.receiveAsFlow()
 
+    var toolbarTitle = ""
+
     init {
         val todoId = savedStateHandle.get<Int>("todoId")
 
         if (todoId != -1) {
+            toolbarTitle = "Edit ToDo"
             viewModelScope.launch {
                 todoId?.let {
                     repository.getTodoById(todoId)?.let {
@@ -46,6 +49,8 @@ class AddEditTodoViewModel @Inject constructor(
                     }
                 }
             }
+        } else {
+            toolbarTitle = "Add ToDo"
         }
     }
 
