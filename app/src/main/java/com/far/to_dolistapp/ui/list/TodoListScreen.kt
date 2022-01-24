@@ -15,6 +15,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.far.to_dolistapp.ui.theme.DarkGray900
 import com.far.to_dolistapp.util.UiEvent
 import kotlinx.coroutines.flow.collect
 
@@ -58,6 +59,9 @@ fun TodoListScreen(
         LazyColumn(
             modifier = Modifier.fillMaxSize()
         ) {
+            item {
+                TopAppBar(backgroundColor = DarkGray900, title = { Text(text = "ToDo List") })
+            }
             items(todos.value) { todo ->
                 TodoItem(
                     todo = todo,

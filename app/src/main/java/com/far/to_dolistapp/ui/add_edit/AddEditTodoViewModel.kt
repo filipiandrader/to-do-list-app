@@ -59,7 +59,7 @@ class AddEditTodoViewModel @Inject constructor(
                     sendUiEvent(UiEvent.ShowSnackbar(message = "The title can't be empty"))
                     return
                 }
-                todo?.let { insertOrUpdateTodo(Todo(it.id, title, description, it.isDone)) }
+                insertOrUpdateTodo(Todo(todo?.id, title, description, todo?.isDone ?: false))
                 sendUiEvent(UiEvent.PopBackStack)
             }
         }
