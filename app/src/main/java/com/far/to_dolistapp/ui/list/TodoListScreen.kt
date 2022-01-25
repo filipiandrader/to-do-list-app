@@ -65,7 +65,8 @@ fun TodoListScreen(
             items(todos.value) { todo ->
                 TodoItem(
                     todo = todo,
-                    onEvent = viewModel::onEvent,
+                    onEventDelete = viewModel::onEvent,
+                    onEventCheck = viewModel::onEvent,
                     modifier = Modifier
                         .fillMaxWidth()
                         .clickable {

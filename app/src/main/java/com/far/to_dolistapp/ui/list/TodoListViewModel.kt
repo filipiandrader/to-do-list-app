@@ -46,10 +46,12 @@ class TodoListViewModel @Inject constructor(
         viewModelScope.launch {
             deletedTodo = todo
             repository.deleteTodo(todo)
-            sendUiEvent(UiEvent.ShowSnackbar(
-                message = "Todo deleted",
-                action = "Undo"
-            ))
+            sendUiEvent(
+                UiEvent.ShowSnackbar(
+                    message = "Todo deleted",
+                    action = "Undo"
+                )
+            )
         }
     }
 
