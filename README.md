@@ -16,6 +16,6 @@
 
 ## Screenshots
 
-<img src="https://github.com/filipiandrader/to-do-list-app/blob/main/app/screenshot/screenshot_01.png" alt="Image 01" height="987" width="480"> <img src="https://github.com/filipiandrader/to-do-list-app/blob/main/app/screenshot/screenshot_02.png" alt="Image 02" height="987" width="480"> 
-<img src="https://github.com/filipiandrader/to-do-list-app/blob/main/app/screenshot/screenshot_03.png" alt="Image 03" height="987" width="480"> <img src="https://github.com/filipiandrader/to-do-list-app/blob/main/app/screenshot/screenshot_04.png" alt="Image 04" height="987" width="480">
-<img src="https://github.com/filipiandrader/to-do-list-app/blob/main/app/screenshot/screenshot_05.png" alt="Image 05" height="987" width="480"> <img src="https://github.com/filipiandrader/to-do-list-app/blob/main/app/screenshot/screenshot_06.png" alt="Image 06" height="987" width="480">
+<img src="https://github.com/filipiandrader/to-do-list-app/blob/main/app/screenshot/screenshot_01.png" alt="Image 01" height="740" width="360"> <img src="https://github.com/filipiandrader/to-do-list-app/blob/main/app/screenshot/screenshot_02.png" alt="Image 02" height="740" width="360"> 
+<img src="https://github.com/filipiandrader/to-do-list-app/blob/main/app/screenshot/screenshot_03.png" alt="Image 03" height="740" width="360"> <img src="https://github.com/filipiandrader/to-do-list-app/blob/main/app/screenshot/screenshot_04.png" alt="Image 04" height="740" width="360">
+<img src="https://github.com/filipiandrader/to-do-list-app/blob/main/app/screenshot/screenshot_05.png" alt="Image 05" height="740" width="360"> <img src="https://github.com/filipiandrader/to-do-list-app/blob/main/app/screenshot/screenshot_06.png" alt="Image 06" height="740" width="360">
