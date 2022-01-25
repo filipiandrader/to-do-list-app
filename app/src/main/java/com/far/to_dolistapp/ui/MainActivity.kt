@@ -10,8 +10,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.far.to_dolistapp.ui.add_edit.AddEditTodoScreen
-import com.far.to_dolistapp.ui.list.TodoListScreen
+import com.far.to_dolistapp.ui.add_edit.screen.AddEditTodoScreen
+import com.far.to_dolistapp.ui.list.screen.TodoListScreen
 import com.far.to_dolistapp.ui.theme.ToDoListAppTheme
 import com.far.to_dolistapp.util.Routes.ADD_TODO
 import com.far.to_dolistapp.util.Routes.EDIT_TODO

@@ -1,4 +1,4 @@
-package com.far.to_dolistapp.ui.list
+package com.far.to_dolistapp.ui.list.screen
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
@@ -46,13 +46,15 @@ fun TodoItem(
                 ) {
                     Text(
                         text = todo.title,
-                        fontSize = 20.sp,
-                        fontWeight = FontWeight.Black
+                        style = MaterialTheme.typography.body1,
                     )
                 }
                 todo.description?.let {
                     Spacer(modifier = Modifier.height(8.dp))
-                    Text(text = it)
+                    Text(
+                        text = it,
+                        style = MaterialTheme.typography.body2,
+                    )
                 }
             }
             Checkbox(

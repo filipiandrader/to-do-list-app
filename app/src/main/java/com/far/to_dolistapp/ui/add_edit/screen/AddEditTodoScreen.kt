@@ -1,4 +1,4 @@
-package com.far.to_dolistapp.ui.add_edit
+package com.far.to_dolistapp.ui.add_edit.screen
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
