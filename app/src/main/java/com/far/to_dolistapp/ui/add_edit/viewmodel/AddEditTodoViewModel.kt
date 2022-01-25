@@ -1,4 +1,4 @@
-package com.far.to_dolistapp.ui.add_edit
+package com.far.to_dolistapp.ui.add_edit.viewmodel
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.far.to_dolistapp.data.Todo
 import com.far.to_dolistapp.data.TodoRepository
+import com.far.to_dolistapp.ui.add_edit.event.AddEditTodoEvent
 import com.far.to_dolistapp.util.UiEvent
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel

@@ -1,4 +1,4 @@
-package com.far.to_dolistapp
+package com.far.to_dolistapp.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

@@ -1,4 +1,4 @@
-package com.far.to_dolistapp.ui.list
+package com.far.to_dolistapp.ui.list.event
 
 import com.far.to_dolistapp.data.Todo
 

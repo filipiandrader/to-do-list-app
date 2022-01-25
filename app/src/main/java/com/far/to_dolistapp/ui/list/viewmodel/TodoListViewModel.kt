@@ -1,9 +1,10 @@
-package com.far.to_dolistapp.ui.list
+package com.far.to_dolistapp.ui.list.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.far.to_dolistapp.data.Todo
 import com.far.to_dolistapp.data.TodoRepository
+import com.far.to_dolistapp.ui.list.event.TodoListEvent
 import com.far.to_dolistapp.util.Routes.ADD_TODO
 import com.far.to_dolistapp.util.Routes.EDIT_TODO
 import com.far.to_dolistapp.util.UiEvent
