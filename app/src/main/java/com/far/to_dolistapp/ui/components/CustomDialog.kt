@@ -7,11 +7,9 @@ import androidx.compose.material.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.far.to_dolistapp.data.Todo
 
 @Composable
 fun CustomDialog(
-    todo: Todo,
     onEvent: () -> Unit,
     title: String,
     textContent: String = "",

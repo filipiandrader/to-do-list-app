@@ -73,7 +73,6 @@ fun TodoItem(
     }
     if (openDialogDelete.value) {
         CustomDialog(
-            todo = todo,
             onEvent = { onEventDelete(TodoListEvent.OnDeleteTodoClick(todo)) },
             title = "Warning!",
             textContent = "Are you sure you want to delete this item?"
@@ -83,7 +82,6 @@ fun TodoItem(
     }
     if (openDialogCheck.value) {
         CustomDialog(
-            todo = todo,
             onEvent = { onEventCheck(TodoListEvent.OnDoneChangeClick(todo, isCheckedState.value)) },
             title = "Warning!",
             textContent = "Have you ever done this ToDo?"
